@@ -8,9 +8,14 @@ public class CarTest {
     Car car = new Car(20, 9, 2021, 6, 11);
     double fuel = car.getFuel();
     double consumption = car.getConsumption();
-
+    int year = car.getInspectionDate().getYear();
+    int month = car.getInspectionDate().getMonthValue();
+    int day = car.getInspectionDate().getDayOfMonth();
     Assertions.assertEquals(fuel, 20);
     Assertions.assertEquals(consumption, 9);
+    Assertions.assertEquals(year, 2021);
+    Assertions.assertEquals(month, 6);
+    Assertions.assertEquals(day, 11);
     }
 
     @Test
